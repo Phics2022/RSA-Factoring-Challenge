@@ -1,0 +1,11 @@
+#!/usr/bin/python3
+from sys import argv
+prime = [2, 3, 5, 7, 11, 13, 17, 23, 31, 37, 1]
+with open (argv[1], "r", encoding="utf-8") as f:
+    for line in f:
+        num = int(line)
+        for i in prime:
+            if num % i == 0:
+                div = num // i
+                print(f"{num}={div}*{i}")
+                break
